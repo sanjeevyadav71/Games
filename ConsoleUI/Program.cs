@@ -35,14 +35,20 @@ namespace ConsoleUI
 
 						break;
 					case "2":
-						gameplay.Shuffle();
+						if (!gameplay.Shuffle())
+							Console.WriteLine("All Cards Played. Choose another option");
+						else
+							Console.WriteLine("Deck Shuffled");
+
 						break;
 
 					case "3":
 						gameplay.Restart();
+						Console.WriteLine("Game Restarted");
 						break;
 
 					case "4":
+						Console.WriteLine("Thank you for playing!");
 						exit = true;
 						break;
 

@@ -3,7 +3,7 @@
     public interface ICardPlay
     {
         bool PlayCard(out string card);
-        void Shuffle();
+        bool Shuffle();
         void Restart();
     }
 }

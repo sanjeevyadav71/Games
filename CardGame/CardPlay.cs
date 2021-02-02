@@ -34,9 +34,13 @@ namespace CardGame
             DeckOfCards.ShuffleAll();
         }
 
-        public void Shuffle()
+        public bool Shuffle()
         {
+            if (top >= Constants.MAX_CARDS)
+                return false;
+
             DeckOfCards.Shuffle(top);
+            return true;
         }
     }
 }
